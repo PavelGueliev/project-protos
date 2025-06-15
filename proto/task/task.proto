@@ -1,0 +1,60 @@
+// proto/task/task.proto
+syntax = "proto3";
+package task;
+
+// Путь для go: репозиторий/proto/task, алиас — task
+option go_package = "github.com/your-org/project-protos/proto/task;task";
+
+// Сущность задача
+message Task {
+  uint32 id    = 1;
+  string title = 2;
+}
+
+// Создание
+message CreateTaskRequest {
+  string title = 1;
+}
+message CreateTaskResponse {
+  Task task = 1;
+}
+
+// Получение
+message GetTaskRequest {
+  uint32 id = 1;
+}
+message GetTaskResponse {
+  Task task = 1;
+}
+
+// Список
+message ListTasksRequest {
+  // здесь могут быть фильтры, пейджинг и т.д.
+}
+message ListTasksResponse {
+  repeated Task tasks = 1;
+}
+
+// Обновление
+message UpdateTaskRequest {
+  Task task = 1;
+}
+message UpdateTaskResponse {
+  Task task = 1;
+}
+
+// Удаление
+message DeleteTaskRequest {
+  uint32 id = 1;
+}
+message DeleteTaskResponse {
+  bool success = 1;
+}
+
+service TaskService {
+  rpc CreateTask (CreateTaskRequest)   returns (CreateTaskResponse);
+  rpc GetTask    (GetTaskRequest)      returns (GetTaskResponse);
+  rpc ListTasks  (ListTasksRequest)    returns (ListTasksResponse);
+  rpc UpdateTask (UpdateTaskRequest)   returns (UpdateTaskResponse);
+  rpc DeleteTask (DeleteTaskRequest)   returns (DeleteTaskResponse);
+}
