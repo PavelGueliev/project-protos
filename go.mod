@@ -1,4 +1,4 @@
-module github.com/your-org/project-protos
+module github.com/PavelGueliev/project-protos
 
 go 1.24.1
 
