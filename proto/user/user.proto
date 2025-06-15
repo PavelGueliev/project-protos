@@ -3,7 +3,7 @@ syntax = "proto3";
 package user;
 
 // Путь для go: репозиторий/proto/user, а алиас пакета — user
-option go_package = "github.com/your-org/project-protos/proto/user;user";
+option go_package = "github.com/PavelGueliev/project-protos/proto/user;user";
 
 // Сущность пользователь
 message User {

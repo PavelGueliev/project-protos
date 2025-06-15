@@ -3,7 +3,7 @@ syntax = "proto3";
 package task;
 
 // Путь для go: репозиторий/proto/task, алиас — task
-option go_package = "github.com/your-org/project-protos/proto/task;task";
+option go_package = "github.com/PavelGueliev/project-protos/proto/task;task";
 
 // Сущность задача
 message Task {
