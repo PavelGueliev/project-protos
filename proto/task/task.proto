@@ -29,7 +29,9 @@ message GetTaskRequest {
 message GetTaskResponse {
   Task task = 1;
 }
-
+message ListTasksRequest {
+  // можно добавить фильтры/пейджинг
+}
 // List all
 message ListTasksResponse {
   repeated Task tasks = 1;
